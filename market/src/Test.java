@@ -1,21 +1,24 @@
+import DAO.UserController;
 import Model.Product;
 import Model.User;
+
+import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
         User user = new User();
-        user.setEmail("email@email.com");
-        user.setName("NameTest");
-        user.setPassword("TestPassword");
+        UserController userController = new UserController();
 
-        System.out.println(user.toString());
+        String name = scanner.next();
+        String email = scanner.next();
+        String password = scanner.next();
 
-        Product product = new Product();
-        product.setNameProduct("Socks");
-        product.setPrice(10.99);
-        product.setAmount(10);
+        user.setName(name);
+        user.setEmail(email);
+        user.setPassword(password);
 
-        System.out.println(product.toString());
+        userController.newUser(user);
     }
 }
