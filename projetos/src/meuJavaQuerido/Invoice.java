@@ -10,5 +10,7 @@ public class Invoice {
     public Invoice(int id, Customer customer) {
         this.id = id;
         this.customer = customer;
+        this.products = new Product[15];
+        this.quantities = new int[15];
     }
 }
