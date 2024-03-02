@@ -25,7 +25,7 @@ public class Invoice {
     }
 
     public double getTotalAfterDiscount() {
-        return (1 - this.customer.getDiscount() / 100) * this.getTotal();
+        return (1 - (double) this.customer.getDiscount() / 100) * this.getTotal();
     }
 
     public boolean addProduct(Product product, int amount) {
