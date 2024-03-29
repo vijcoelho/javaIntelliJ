@@ -1,17 +1,20 @@
 public class Exc7 {
     public static void removeDuplicates(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            for (int j = i; j < array.length - 1; j++) {
+            for (int j = i + 1; j < array.length; j++) {
                 if (array[i] == array[j]) {
+                    array[j] = 0;
                 }
             }
         }
         for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+            if (array[i] != 0) {
+                System.out.println(array[i]);
+            }
         }
     }
 
     public static void main(String[] args) {
-        removeDuplicates(new int[]{1,2,3,4,4});
+        removeDuplicates(new int[]{1,2,2,4});
     }
 }
