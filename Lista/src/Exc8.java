@@ -1,5 +1,3 @@
-package TestClass;
-
 public class Exc8 {
     public static void negativoPrimeiro(int[] array) {
         int menor = 0;
